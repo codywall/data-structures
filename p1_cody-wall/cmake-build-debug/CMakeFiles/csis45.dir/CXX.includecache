@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/cody/Desktop/fall19/csis45/header.h
+
+/Users/cody/Desktop/fall19/csis45/header2.h
+
+/Users/cody/Desktop/fall19/csis45/main.cpp
+header.h
+/Users/cody/Desktop/fall19/csis45/header.h
+header2.h
+/Users/cody/Desktop/fall19/csis45/header2.h
+rectangle.h
+/Users/cody/Desktop/fall19/csis45/rectangle.h
+iostream
+-
+
+/Users/cody/Desktop/fall19/csis45/rectangle.cpp
+iostream
+-
+cassert
+-
+
+/Users/cody/Desktop/fall19/csis45/rectangle.h
+
