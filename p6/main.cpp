@@ -26,26 +26,65 @@ public:
     }
 
     //rear ++ upon insertion, if rear reaches far right, move it to far left
-    void insert(int newValue) //put item at rear of queue
+    void insertRight(int newValue) //put item at rear of queue
     {
-        //deal w wraparound
-        if (rear == size - 1) //reached the far right
-            rear = -1; //move to beginning, so rear++ goes to 0
+        if (!isFull()) {
+            //deal w wraparound
+            if (rear == size - 1) //reached the far right
+                rear = -1; //move to beginning, so rear++ goes to 0
 
             rear++; //increment rear
             queueArray[rear] = newValue; //insert into rear
             number_items++; //add item
+        } else {
+            cout << " * The queue is full * ";
+        }
+    }
+
+    //front ++ upon insertion, if front reaches far left, move it to far right
+    void insertLeft(int newValue) //put item at front of queue
+    {
+        if (!isFull()) {
+            //deal w wraparound
+            if (front == 0) //reached the far left
+                front = size; //move to end, so front++ goes to the end
+
+            front--; //decrement front
+            queueArray[front] = newValue; //insert into front
+            number_items++; //add item
+        } else {
+            cout << " * The queue is full * ";
+        }
     }
 
     //front++ upon removal, if front reaches far right, move it to far left
-    int remove()
+    int removeLeft()
     {
-        int temp = queueArray[front++];
-        if (front == size)
-            front = 0;
+        if (!isEmpty()) {
+            int temp = queueArray[front++];
+            if (front == size)
+                front = 0;
 
-        number_items--;
-        return temp;
+            number_items--;
+            return temp;
+        } else {
+            return 0;
+        }
+    }
+
+    //rear-- upon removal, if rear reaches far left, move it to far right
+    int removeRight()
+    {
+        if (!isEmpty()) {
+            int temp = queueArray[rear--];
+            if (rear == 0)
+                rear = size;
+
+            number_items--;
+            return temp;
+        } else {
+            return 0;
+        }
     }
 
     int peekFront() { return queueArray[front]; };
@@ -57,17 +96,28 @@ public:
 
 int main() {
     Queue aQueue(5); // { }
-    aQueue.insert(10);
-    aQueue.insert(20);
-    aQueue.insert(30);
-    aQueue.insert(40);
-    aQueue.insert(50);
+    aQueue.insertRight(10);
+    aQueue.insertRight(20);
+    aQueue.insertRight(30);
+    aQueue.insertLeft(50);
+    aQueue.insertLeft(40);
+    cout << "Deleted number on the left: " << aQueue.removeLeft() << endl;
+    cout << "Deleted number on the right: " << aQueue.removeRight() << endl;
+    cout << aQueue.qsize() << " items in the queue: ";
     cout << "{ ";
+
     while ( !aQueue.isEmpty() )
     {
         cout << aQueue.peekFront() << " ";
-        aQueue.remove();
+        aQueue.removeLeft();
     }
-    cout << "}";
+    cout << "} " << endl;
     return 0;
 }
+
+///Users/cody/Desktop/fall19/data-structures/p6/cmake-build-debug/p6
+//        Deleted number on the left: 40
+//Deleted number on the right: 30
+//3 items in the queue: { 50 10 20 }
+//0
+//Process finished with exit code 0
