@@ -1,3 +1,3 @@
-/Users/wall2294a/Desktop/projects/p7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/wall2294a/Desktop/projects/p7/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/wall2294a/Desktop/projects/p7/cmake-build-debug/CMakeFiles/p7.dir
+/Users/wall2294a/Documents/projects/data-structures/p7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/wall2294a/Documents/projects/data-structures/p7/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wall2294a/Documents/projects/data-structures/p7/cmake-build-debug/CMakeFiles/p7.dir
