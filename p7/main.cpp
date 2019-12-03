@@ -110,8 +110,7 @@ public:
 
         while (pCurrent != NULL) //until end of list
         {
-            sum += pCurrent->iData;
-//            pCurrent->displayLink(); //show the link
+            sum += pCurrent->iData;     //add the current num to the sum variable
             pCurrent = pCurrent->pNext; //move to next link
         }
         return sum;
@@ -119,11 +118,24 @@ public:
 
     int min()                   //returns the smallest iData of all links
     {
-
+        Link *pCurrent = pFirst; //start at beginning of list
+        int min;
+        while (pCurrent != NULL) {
+            if (min > pCurrent->iData)          //if min is bigger than the current num
+                min = pCurrent->iData;          //make min equal to the current num
+            pCurrent = pCurrent->pNext; //move to next link
+        }
+        return min;
     }
-
     int numLinks()              //returns the number of links
     {
+        Link *pCurrent = pFirst; //start at beginning of list
+        int counter = 0;
+        while (pCurrent != NULL) {
+            counter++;          //add to the counter
+            pCurrent = pCurrent->pNext; //move to next link
+        }
+        return counter;
 
     }
 
@@ -177,3 +189,25 @@ int main() {
 
     return 0;
 }
+
+///Users/wall2294a/Documents/projects/data-structures/p7/cmake-build-debug/p7
+//        List (first-->last): {88, 8.99} {66, 6.99} {44, 4.99} {22, 2.99}
+//
+//Removing link with data {88, 8.99}
+//Removing link with data {66, 6.99}
+//Removing link with data {44, 4.99}
+//Removing link with data {22, 2.99}
+//Empty list: List (first-->last):
+//
+//Reinserting the links
+//        List (first-->last): {88, 8.99} {66, 6.99} {44, 4.99} {22, 2.99}
+//Found link with key: 44
+//Deleted 44 from the list.
+//Link list after deletion:
+//List (first-->last): {88, 8.99} {66, 6.99} {22, 2.99}
+//
+//The sum of all links is: 176
+//The smallest link is: 22
+//The number of links is: 3
+//
+//Process finished with exit code 0
