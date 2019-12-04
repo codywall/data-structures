@@ -1,3 +1,16 @@
+//P7: Linked List
+//Cody Wall
+//01 December 2019
+//Part 1) Write the Complete Link List (shown on pages 1-14 above)
+//Part 2) Test the Link List:
+//Part 3) Show your Results (as a multiline comment /* */ at the bottom of your code):
+//Part 4) Add the following 3 new methods to LinkList:
+//int sumData() – returns the sum of iData of all links
+//int min() – returns the smallest iData of all links
+//int numLinks() – returns the total number of links in the list
+//Part 5) Test the new methods from the main()
+//Part 6) Show your results
+
 #include <iostream>
 using namespace std;
 
@@ -190,24 +203,26 @@ int main() {
     return 0;
 }
 
-///Users/wall2294a/Documents/projects/data-structures/p7/cmake-build-debug/p7
-//        List (first-->last): {88, 8.99} {66, 6.99} {44, 4.99} {22, 2.99}
-//
-//Removing link with data {88, 8.99}
-//Removing link with data {66, 6.99}
-//Removing link with data {44, 4.99}
-//Removing link with data {22, 2.99}
-//Empty list: List (first-->last):
-//
-//Reinserting the links
-//        List (first-->last): {88, 8.99} {66, 6.99} {44, 4.99} {22, 2.99}
-//Found link with key: 44
-//Deleted 44 from the list.
-//Link list after deletion:
-//List (first-->last): {88, 8.99} {66, 6.99} {22, 2.99}
-//
-//The sum of all links is: 176
-//The smallest link is: 22
-//The number of links is: 3
-//
-//Process finished with exit code 0
+/*
+/Users/wall2294a/Documents/projects/data-structures/p7/cmake-build-debug/p7
+        List (first-->last): {88, 8.99} {66, 6.99} {44, 4.99} {22, 2.99}
+
+Removing link with data {88, 8.99}
+Removing link with data {66, 6.99}
+Removing link with data {44, 4.99}
+Removing link with data {22, 2.99}
+Empty list: List (first-->last):
+
+Reinserting the links
+        List (first-->last): {88, 8.99} {66, 6.99} {44, 4.99} {22, 2.99}
+Found link with key: 44
+Deleted 44 from the list.
+Link list after deletion:
+List (first-->last): {88, 8.99} {66, 6.99} {22, 2.99}
+
+The sum of all links is: 176
+The smallest link is: 22
+The number of links is: 3
+
+Process finished with exit code 0
+ */
