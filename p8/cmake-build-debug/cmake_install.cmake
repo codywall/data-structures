@@ -1,4 +1,4 @@
-# Install script for directory: /Users/wall2294a/Documents/projects/data-structures/p8
+# Install script for directory: /Users/cody/Desktop/fall19/data-structures/p8
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/wall2294a/Documents/projects/data-structures/p8/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/cody/Desktop/fall19/data-structures/p8/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
