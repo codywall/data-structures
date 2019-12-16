@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/cody/Desktop/fall19/data-structures/p12/main.cpp
+iostream
+-
+iomanip
+-
+stack
+-
+vector
+-
+cstdlib
+-
+ctime
+-
+
